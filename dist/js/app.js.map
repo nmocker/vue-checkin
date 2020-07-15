@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":["app","Vue","el","data"],"mappings":";;AAAA,IAAIA,GAAG,GAAG,IAAIC,GAAJ,CAAQ;AACjBC,EAAAA,EAAE,EAAE,MADa;AAEjBC,EAAAA,IAAI,EAAE;AAFW,CAAR,CAAV","sourcesContent":["var app = new Vue({\n\tel: \"#app\",\n\tdata: {\n\t\t\t\n\t}\n})\n"],"file":"app.js"}
