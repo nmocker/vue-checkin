@@ -12,12 +12,15 @@ var app = new Vue({
   },
   methods: {
     addPerson: function addPerson() {
-      this.attendees.push({
-        name: "",
-        time: "",
-        email: ""
+      this.attendees.unshift({
+        name: this.newPerson.name,
+        time: Date.now(),
+        timeElapsed: 0,
+        email: this.newPerson.email,
+        image: "https://www.gravatar.com/avatar/"
       });
-      this.newPersonName = "";
+      this.newPerson.name = "";
+      this.newPerson.email = "";
     }
   }
 });

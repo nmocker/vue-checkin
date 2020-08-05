@@ -14,9 +14,17 @@
       <h1>Welcome to AcronymCon!</h1>
       <ul>
         <li v-for="attendee in attendees">
-          <img src="" alt="" />
-          <h3 v-for="name in newPerson">{{name.name}}</h3>
-          <p>0 minute<span>s</span> ago</p>
+          <img :src="attendee.image" alt="Avatar" />
+          <h3>{{attendee.name}}</h3>
+          <span>{{attendee.email}}</span>
+          <p>
+            {{attendee.timeElapsed}} minute<span
+              v-if="attendee.timeElapsed != 1"
+              >s</span
+            >
+
+            ago
+          </p>
         </li>
       </ul>
       <h2>Check in</h2>
@@ -33,6 +41,7 @@
       <button @click="addPerson">Submit Person</button>
     </div>
 
+    <script src="dist/js/elapseMe.min copy.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="dist/js/app.js"></script>
   </body>
